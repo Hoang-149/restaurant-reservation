@@ -43,7 +43,8 @@
                             <div class="mt-1">
                                 <select id="status" name="status" class="form-multiselect block w-full mt-1">
                                     @foreach (App\Enums\TableStatus::cases() as $status)
-                                        <option value="{{ $status->value }}" @selected($table->status->value == $status->value)>
+                                        <option value="{{ $status->value }}"
+                                            @if ($table->status->value == $status->value) selected @endif>
                                             {{ $status->name }}</option>
                                     @endforeach
                                 </select>
@@ -57,7 +58,8 @@
                             <div class="mt-1">
                                 <select id="location" name="location" class="form-multiselect block w-full mt-1">
                                     @foreach (App\Enums\TableLocation::cases() as $location)
-                                        <option value="{{ $location->value }}" @selected($table->location->value == $location->value)>
+                                        <option value="{{ $location->value }}"
+                                            @if ($table->location->value == $location->value) selected @endif>
                                             {{ $location->name }}</option>
                                     @endforeach
                                 </select>

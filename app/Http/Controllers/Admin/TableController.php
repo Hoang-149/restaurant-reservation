@@ -45,7 +45,7 @@ class TableController extends Controller
             'location' => $request->location,
         ]);
 
-        return redirect('admin/tables')->with('success', 'Table created successfully.');
+        return redirect('admin/tables')->with('success', 'Table created successfully');
     }
 
     /**

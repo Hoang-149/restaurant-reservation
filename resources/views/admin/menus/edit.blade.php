@@ -69,7 +69,8 @@
                                 <select id="categories" name="categories[]" class="form-multiselect block w-full mt-1"
                                     multiple>
                                     @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}" @selected($menu->categories->contains($category))>
+                                        <option value="{{ $category->id }}"
+                                            @if ($menu->categories->contains($category)) selected @endif>
                                             {{ $category->name }}</option>
                                     @endforeach
                                 </select>
